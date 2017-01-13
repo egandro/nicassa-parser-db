@@ -1,0 +1,51 @@
+{
+  "name": "nicassa-parser-db",
+  "description": "CLI based schema 2 JSON parser for Sequelize",
+  "version": "0.0.3",
+  "author": "Harald Fielker <harald.fielker@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/egandro/nicassa-parser-db.git"
+  },
+  "bugs": {
+    "url": "https://github.com/egandro/nicassa-parser-db/issues"
+  },
+  "bin": {
+    "nicassa-parser-db": "launcher.js"
+  },
+  "main": "index.ts",
+  "dependencies": {
+    "@types/node": "^6.0.55",
+    "@types/nomnom": "^0.0.28",
+    "@types/sequelize": "^4.0.39",
+    "mysql": "^2.12.0",
+    "nomnom": "^1.8.1",
+    "pg": "^6.1.2",
+    "pg-hstore": "^2.3.2",
+    "prompt": "^1.0.0",
+    "sequelize": "^3.28.0",
+    "sqlite3": "^3.1.8",
+    "tedious": "^1.14.0",
+    "ts-node": "^2.0.0",
+    "typescript": "^2.1.4"
+  },
+  "devDependencies": {
+    "codelyzer": "^2.0.0-beta.4",
+    "tslint": "^4.2.0"
+  },
+  "scripts": {},
+  "keywords": [
+    "mysql",
+    "sqlite",
+    "postgresql",
+    "postgres",
+    "mssql",
+    "orm",
+    "nodejs",
+    "object relational mapper",
+    "json",
+    "schema reader",
+    "nicassa"
+  ],
+  "license": "MIT"
+}

@@ -1,0 +1,2263 @@
+{
+  "nicassaParserDB": {
+    "formatVersion": "1.0",
+    "lastUpdateUTC": "Mon, 02 Jan 2017 23:57:26 GMT",
+    "sequelizeConnect": {
+      "options": {
+        "dialect": "sqlite",
+        "storage": "./test.db",
+        "benchmark": true,
+        "logging": false
+      }
+    },
+    "filter": {
+      "excludeTables": false,
+      "excludeViews": false,
+      "exculdeColumns": [],
+      "exculde": [],
+      "only": []
+    },
+    "schema": {
+      "dialect": "sqlite",
+      "tables": [
+        {
+          "name": "Categories",
+          "columns": [
+            {
+              "name": "CategoryID",
+              "dataType": "INTEGER",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": true,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "CategoryName",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Description",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Picture",
+              "dataType": "BLOB",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            }
+          ]
+        },
+        {
+          "name": "CustomerCustomerDemo",
+          "columns": [
+            {
+              "name": "CustomerID",
+              "dataType": "TEXT",
+              "nullable": false,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": true,
+              "referencedTableName": "Customers",
+              "referencedColumnName": "CustomerID"
+            },
+            {
+              "name": "CustomerTypeID",
+              "dataType": "TEXT",
+              "nullable": false,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": "CustomerDemographics",
+              "referencedColumnName": "CustomerTypeID"
+            }
+          ]
+        },
+        {
+          "name": "CustomerDemographics",
+          "columns": [
+            {
+              "name": "CustomerTypeID",
+              "dataType": "TEXT",
+              "nullable": false,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": true,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "CustomerDesc",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            }
+          ]
+        },
+        {
+          "name": "Customers",
+          "columns": [
+            {
+              "name": "CustomerID",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": true,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "CompanyName",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ContactName",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ContactTitle",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Address",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "City",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Region",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "PostalCode",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Country",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Phone",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Fax",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            }
+          ]
+        },
+        {
+          "name": "EmployeeTerritories",
+          "columns": [
+            {
+              "name": "EmployeeID",
+              "dataType": "INTEGER",
+              "nullable": false,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": true,
+              "referencedTableName": "Employees",
+              "referencedColumnName": "EmployeeID"
+            },
+            {
+              "name": "TerritoryID",
+              "dataType": "TEXT",
+              "nullable": false,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": "Territories",
+              "referencedColumnName": "TerritoryID"
+            }
+          ]
+        },
+        {
+          "name": "Employees",
+          "columns": [
+            {
+              "name": "EmployeeID",
+              "dataType": "INTEGER",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": true,
+              "referencedTableName": "Employees",
+              "referencedColumnName": "ReportsTo"
+            },
+            {
+              "name": "LastName",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "FirstName",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Title",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "TitleOfCourtesy",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "BirthDate",
+              "dataType": "DATE",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "HireDate",
+              "dataType": "DATE",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Address",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "City",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Region",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "PostalCode",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Country",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "HomePhone",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Extension",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Photo",
+              "dataType": "BLOB",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Notes",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ReportsTo",
+              "dataType": "INTEGER",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "PhotoPath",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            }
+          ]
+        },
+        {
+          "name": "Order Details",
+          "columns": [
+            {
+              "name": "OrderID",
+              "dataType": "INTEGER",
+              "nullable": false,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": true,
+              "referencedTableName": "Orders",
+              "referencedColumnName": "OrderID"
+            },
+            {
+              "name": "ProductID",
+              "dataType": "INTEGER",
+              "nullable": false,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": "Products",
+              "referencedColumnName": "ProductID"
+            },
+            {
+              "name": "UnitPrice",
+              "dataType": "NUMERIC",
+              "nullable": false,
+              "defaultValue": "0",
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Quantity",
+              "dataType": "INTEGER",
+              "nullable": false,
+              "defaultValue": "1",
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Discount",
+              "dataType": "REAL",
+              "nullable": false,
+              "defaultValue": "0",
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            }
+          ]
+        },
+        {
+          "name": "Orders",
+          "columns": [
+            {
+              "name": "OrderID",
+              "dataType": "INTEGER",
+              "nullable": false,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": true,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "CustomerID",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": "Customers",
+              "referencedColumnName": "CustomerID"
+            },
+            {
+              "name": "EmployeeID",
+              "dataType": "INTEGER",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": "Employees",
+              "referencedColumnName": "EmployeeID"
+            },
+            {
+              "name": "OrderDate",
+              "dataType": "DATETIME",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "RequiredDate",
+              "dataType": "DATETIME",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ShippedDate",
+              "dataType": "DATETIME",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ShipVia",
+              "dataType": "INTEGER",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": "Shippers",
+              "referencedColumnName": "ShipperID"
+            },
+            {
+              "name": "Freight",
+              "dataType": "NUMERIC",
+              "nullable": true,
+              "defaultValue": "0",
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ShipName",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ShipAddress",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ShipCity",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ShipRegion",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ShipPostalCode",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ShipCountry",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            }
+          ]
+        },
+        {
+          "name": "Products",
+          "columns": [
+            {
+              "name": "ProductID",
+              "dataType": "INTEGER",
+              "nullable": false,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": true,
+              "referencedTableName": "Categories",
+              "referencedColumnName": "CategoryID"
+            },
+            {
+              "name": "ProductName",
+              "dataType": "TEXT",
+              "nullable": false,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "SupplierID",
+              "dataType": "INTEGER",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": "Suppliers",
+              "referencedColumnName": "SupplierID"
+            },
+            {
+              "name": "CategoryID",
+              "dataType": "INTEGER",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "QuantityPerUnit",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "UnitPrice",
+              "dataType": "NUMERIC",
+              "nullable": true,
+              "defaultValue": "0",
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "UnitsInStock",
+              "dataType": "INTEGER",
+              "nullable": true,
+              "defaultValue": "0",
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "UnitsOnOrder",
+              "dataType": "INTEGER",
+              "nullable": true,
+              "defaultValue": "0",
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ReorderLevel",
+              "dataType": "INTEGER",
+              "nullable": true,
+              "defaultValue": "0",
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Discontinued",
+              "dataType": "TEXT",
+              "nullable": false,
+              "defaultValue": "'0'",
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            }
+          ]
+        },
+        {
+          "name": "Regions",
+          "columns": [
+            {
+              "name": "RegionID",
+              "dataType": "INTEGER",
+              "nullable": false,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": true,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "RegionDescription",
+              "dataType": "TEXT",
+              "nullable": false,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            }
+          ]
+        },
+        {
+          "name": "Shippers",
+          "columns": [
+            {
+              "name": "ShipperID",
+              "dataType": "INTEGER",
+              "nullable": false,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": true,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "CompanyName",
+              "dataType": "TEXT",
+              "nullable": false,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Phone",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            }
+          ]
+        },
+        {
+          "name": "Suppliers",
+          "columns": [
+            {
+              "name": "SupplierID",
+              "dataType": "INTEGER",
+              "nullable": false,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": true,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "CompanyName",
+              "dataType": "TEXT",
+              "nullable": false,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ContactName",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ContactTitle",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Address",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "City",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Region",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "PostalCode",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Country",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Phone",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Fax",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "HomePage",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            }
+          ]
+        },
+        {
+          "name": "Territories",
+          "columns": [
+            {
+              "name": "TerritoryID",
+              "dataType": "TEXT",
+              "nullable": false,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": true,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "TerritoryDescription",
+              "dataType": "TEXT",
+              "nullable": false,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "RegionID",
+              "dataType": "INTEGER",
+              "nullable": false,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": "Regions",
+              "referencedColumnName": "RegionID"
+            }
+          ]
+        }
+      ],
+      "views": [
+        {
+          "name": "Alphabetical list of products",
+          "columns": [
+            {
+              "name": "ProductID",
+              "dataType": "INTEGER",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ProductName",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "SupplierID",
+              "dataType": "INTEGER",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "CategoryID",
+              "dataType": "INTEGER",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "QuantityPerUnit",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "UnitPrice",
+              "dataType": "NUMERIC",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "UnitsInStock",
+              "dataType": "INTEGER",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "UnitsOnOrder",
+              "dataType": "INTEGER",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ReorderLevel",
+              "dataType": "INTEGER",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Discontinued",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "CategoryName",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            }
+          ]
+        },
+        {
+          "name": "Category Sales for 1997",
+          "columns": [
+            {
+              "name": "CategoryName",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "CategorySales",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            }
+          ]
+        },
+        {
+          "name": "Current Product List",
+          "columns": [
+            {
+              "name": "ProductID",
+              "dataType": "INTEGER",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ProductName",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            }
+          ]
+        },
+        {
+          "name": "Customer and Suppliers by City",
+          "columns": [
+            {
+              "name": "City",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "CompanyName",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ContactName",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Relationship",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            }
+          ]
+        },
+        {
+          "name": "Invoices",
+          "columns": [
+            {
+              "name": "ShipName",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ShipAddress",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ShipCity",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ShipRegion",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ShipPostalCode",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ShipCountry",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "CustomerID",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "CustomerName",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Address",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "City",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Region",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "PostalCode",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Country",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Salesperson",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "OrderID",
+              "dataType": "INTEGER",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "OrderDate",
+              "dataType": "DATETIME",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "RequiredDate",
+              "dataType": "DATETIME",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ShippedDate",
+              "dataType": "DATETIME",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ShipperName",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ProductID",
+              "dataType": "INTEGER",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ProductName",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "UnitPrice",
+              "dataType": "NUMERIC",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Quantity",
+              "dataType": "INTEGER",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Discount",
+              "dataType": "REAL",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ExtendedPrice",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Freight",
+              "dataType": "NUMERIC",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            }
+          ]
+        },
+        {
+          "name": "Order Details Extended",
+          "columns": [
+            {
+              "name": "OrderID",
+              "dataType": "INTEGER",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ProductID",
+              "dataType": "INTEGER",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ProductName",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "UnitPrice",
+              "dataType": "NUMERIC",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Quantity",
+              "dataType": "INTEGER",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Discount",
+              "dataType": "REAL",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ExtendedPrice",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            }
+          ]
+        },
+        {
+          "name": "Order Subtotals",
+          "columns": [
+            {
+              "name": "OrderID",
+              "dataType": "INTEGER",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Subtotal",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            }
+          ]
+        },
+        {
+          "name": "Orders Qry",
+          "columns": [
+            {
+              "name": "OrderID",
+              "dataType": "INTEGER",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "CustomerID",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "EmployeeID",
+              "dataType": "INTEGER",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "OrderDate",
+              "dataType": "DATETIME",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "RequiredDate",
+              "dataType": "DATETIME",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ShippedDate",
+              "dataType": "DATETIME",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ShipVia",
+              "dataType": "INTEGER",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Freight",
+              "dataType": "NUMERIC",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ShipName",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ShipAddress",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ShipCity",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ShipRegion",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ShipPostalCode",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ShipCountry",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "CompanyName",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Address",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "City",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Region",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "PostalCode",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Country",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            }
+          ]
+        },
+        {
+          "name": "Product Sales for 1997",
+          "columns": [
+            {
+              "name": "CategoryName",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ProductName",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ProductSales",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            }
+          ]
+        },
+        {
+          "name": "Products Above Average Price",
+          "columns": [
+            {
+              "name": "ProductName",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "UnitPrice",
+              "dataType": "NUMERIC",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            }
+          ]
+        },
+        {
+          "name": "Products by Category",
+          "columns": [
+            {
+              "name": "CategoryName",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ProductName",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "QuantityPerUnit",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "UnitsInStock",
+              "dataType": "INTEGER",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Discontinued",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            }
+          ]
+        },
+        {
+          "name": "Quarterly Orders",
+          "columns": [
+            {
+              "name": "CustomerID",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "CompanyName",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "City",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Country",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            }
+          ]
+        },
+        {
+          "name": "Sales Totals by Amount",
+          "columns": [
+            {
+              "name": "SaleAmount",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "OrderID",
+              "dataType": "INTEGER",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "CompanyName",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ShippedDate",
+              "dataType": "DATETIME",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            }
+          ]
+        },
+        {
+          "name": "Sales by Category",
+          "columns": [
+            {
+              "name": "CategoryID",
+              "dataType": "INTEGER",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "CategoryName",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ProductName",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "ProductSales",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            }
+          ]
+        },
+        {
+          "name": "Summary of Sales by Quarter",
+          "columns": [
+            {
+              "name": "ShippedDate",
+              "dataType": "DATETIME",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "OrderID",
+              "dataType": "INTEGER",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Subtotal",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            }
+          ]
+        },
+        {
+          "name": "Summary of Sales by Year",
+          "columns": [
+            {
+              "name": "ShippedDate",
+              "dataType": "DATETIME",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "OrderID",
+              "dataType": "INTEGER",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            },
+            {
+              "name": "Subtotal",
+              "dataType": "TEXT",
+              "nullable": true,
+              "defaultValue": null,
+              "length": null,
+              "precision": null,
+              "pk": false,
+              "referencedTableName": null,
+              "referencedColumnName": null
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
