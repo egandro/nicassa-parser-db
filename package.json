@@ -1,7 +1,7 @@
 {
   "name": "nicassa-parser-db",
   "description": "CLI based schema 2 JSON parser for Sequelize",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "Harald Fielker <harald.fielker@gmail.com>",
   "repository": {
     "type": "git",

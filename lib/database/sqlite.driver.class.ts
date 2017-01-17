@@ -96,13 +96,16 @@ export class SQLiteDriver implements BaseDriver {
             let arr = (<any>data)[0];
 
             for (let i = 0; i < arr.length; i++) {
+                let dataType = this.parseDataType(arr[i].type);
+                let length = this.parseDataTypeLength(arr[i].type);
+
                 let item: ColumnSymbol = {
                     name: arr[i].name,
                     tableName: table,
-                    dataType: arr[i].type || 'TEXT',
+                    dataType: dataType,
                     nullable: arr[i].notnull === 0,
                     defaultValue: arr[i].dflt_value,
-                    length: <any>null,
+                    length: length,
                     numericPrecision: <any>null,
                     datetimePrecision: <any>null
                 }
@@ -111,6 +114,32 @@ export class SQLiteDriver implements BaseDriver {
         }
 
         return await result;
+    }
+
+    protected parseDataType(str: string): any {
+        if (str === undefined || str === null) {
+            return 'TEXT';
+        }
+        return str.replace(/\(.*/g, '');
+    }
+
+    protected parseDataTypeLength(str: string): any {
+        if (str === undefined || str === null) {
+            return null;
+        }
+
+        if (str.indexOf('(') === -1) {
+            return null;
+        }
+
+        let rex = /\d+(?=\))/;
+        let matches = str.match(rex);
+
+        if (matches === null || matches.length != 1) {
+            return null;
+        }
+
+        return matches[0];
     }
 
     protected async getPrimaryKeys(): Promise<PrimaryKeySymbol[]> {
