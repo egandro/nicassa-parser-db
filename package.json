@@ -1,7 +1,7 @@
 {
   "name": "nicassa-parser-db",
   "description": "CLI based schema 2 JSON parser for Sequelize",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "Harald Fielker <harald.fielker@gmail.com>",
   "repository": {
     "type": "git",
@@ -15,23 +15,22 @@
   },
   "main": "index.ts",
   "dependencies": {
-    "@types/node": "^6.0.55",
+    "@types/node": "^7.0.22",
     "@types/nomnom": "^0.0.28",
-    "@types/sequelize": "^4.0.39",
-    "mysql": "^2.12.0",
+    "@types/sequelize": "^4.0.55",
+    "mysql": "^2.13.0",
     "nomnom": "^1.8.1",
-    "pg": "^6.1.2",
+    "pg": "^6.2.3",
     "pg-hstore": "^2.3.2",
     "prompt": "^1.0.0",
-    "sequelize": "^3.28.0",
+    "sequelize": "^3.30.4",
     "sqlite3": "^3.1.8",
-    "tedious": "^1.14.0",
-    "ts-node": "^2.0.0",
-    "typescript": "^2.1.4"
+    "tedious": "^2.0.0",
+    "ts-node": "^3.0.4",
+    "typescript": "^2.3.3"
   },
   "devDependencies": {
-    "codelyzer": "^2.0.0-beta.4",
-    "tslint": "^4.2.0"
+    "tslint": "^5.3.2"
   },
   "scripts": {},
   "keywords": [
