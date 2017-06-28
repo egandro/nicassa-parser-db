@@ -1,5 +1,6 @@
 let fs = require('fs');
 let process = require('process');
+const shajs = require('sha.js');
 
 import sequelize = require('sequelize');
 let Sequelize: sequelize.SequelizeStatic = require('sequelize');
@@ -99,11 +100,24 @@ export class UpdateSymbolTable {
         }
 
         let toplevel: any = JSON.parse(str);
+        toplevel.nicassaParserDB.lastUpdateUTC = ''; // nullify date
+
+        str = JSON.stringify(toplevel, null, 2);
+        let currentChecksum = this.checkSum(str);
 
         toplevel.nicassaParserDB.formatVersion = '1.0';
-        toplevel.nicassaParserDB.lastUpdateUTC = (new Date()).toUTCString();
         toplevel.nicassaParserDB.schema = data;
 
+        str = JSON.stringify(toplevel, null, 2);
+        let updateChecksum = this.checkSum(str);
+
+        if (updateChecksum === currentChecksum) {
+            console.log('no changes detected...');
+            return;
+        }
+
+        // set update date
+        toplevel.nicassaParserDB.lastUpdateUTC = (new Date()).toUTCString();
         str = JSON.stringify(toplevel, null, 2);
 
         try {
@@ -112,6 +126,10 @@ export class UpdateSymbolTable {
             console.error('error: can\'t update file "' + this.fileName + '"');
             process.exit(-1);
         }
+    }
+
+    protected checkSum(data: Buffer|string): string {
+        return shajs('sha256').update(data).digest('hex');
     }
 
     protected async testConnection(con: SequelizeConnect): Promise<sequelize.Sequelize> {
