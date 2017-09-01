@@ -72,6 +72,7 @@ export class PostgresDriver implements BaseDriver {
             "select table_name " +
             "from information_schema.tables " +
             "where table_type = '" + tableType + "' and table_catalog= '" + this.database + "' " +
+            "and table_schema = 'public' " +
             "order by table_name ";
 
         let data = await <any>this.sequelize.query(sql);
@@ -92,6 +93,7 @@ export class PostgresDriver implements BaseDriver {
             "datetime_precision, ordinal_position " +
             "from information_schema.columns " +
             "where table_catalog = '" + this.database + "' " +
+            "and table_schema = 'public' " +
             "order by table_name, ordinal_position";
 
         let data = await <any>this.sequelize.query(sql);
@@ -123,6 +125,7 @@ export class PostgresDriver implements BaseDriver {
             "using(constraint_name,table_schema,table_name)  " +
             "where t.constraint_type='PRIMARY KEY'  " +
             "and t.table_catalog='" + this.database + "'" +
+            "and t.table_schema = 'public' " +
             "order by table_name, column_name";
 
         let data = await <any>this.sequelize.query(sql);
