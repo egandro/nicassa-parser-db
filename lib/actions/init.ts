@@ -94,7 +94,8 @@ export class Init {
             formatVersion: '1.0',
             lastUpdateUTC: (new Date()).toUTCString(),
             sequelizeConnect: connect,
-            filter: filter
+            filter: filter,
+            forceViewColumnsNotNull: false
         }
 
         let toplevel: TopLevel = JSON.parse(str);

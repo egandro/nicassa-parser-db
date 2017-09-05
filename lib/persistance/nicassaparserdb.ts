@@ -9,4 +9,5 @@ export interface NicassaParserDB {
     sequelizeConnect?: SequelizeConnect;
     schema?: Schema;
     filter?: Filter;
+    forceViewColumnsNotNull?: boolean;
 }

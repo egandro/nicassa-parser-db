@@ -17,6 +17,7 @@ export class UpdateSymbolTable {
     sequelize: sequelize.Sequelize;
     fileName: string;
     filter: Filter;
+    forceViewColumnsNotNull: boolean = false;
 
     public async run(opts: any): Promise<boolean> {
         this.fileName = opts.file;
@@ -46,6 +47,9 @@ export class UpdateSymbolTable {
 
         let nicassaParserDB: NicassaParserDB = <NicassaParserDB>toplevel.nicassaParserDB;
         this.filter = <Filter>nicassaParserDB.filter;
+        if (nicassaParserDB.forceViewColumnsNotNull !== undefined && nicassaParserDB.forceViewColumnsNotNull !== null) {
+            this.forceViewColumnsNotNull = nicassaParserDB.forceViewColumnsNotNull;
+        }
 
         // overwrite with uri
         if (uri !== undefined || uri !== null) {
@@ -77,7 +81,7 @@ export class UpdateSymbolTable {
     }
 
     protected async readSchema(): Promise<void> {
-        let reader = new SchemaReader(this.sequelize, this.filter);
+        let reader = new SchemaReader(this.sequelize, this.filter, this.forceViewColumnsNotNull);
         try {
             let data: Schema = await reader.read();
             console.log('updating file...');

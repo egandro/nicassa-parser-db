@@ -23,7 +23,7 @@ import { SQLiteDriver } from './sqlite.driver.class';
 export class SchemaReader {
     driver: BaseDriver;
 
-    constructor(private sequelize: Sequelize, private filter: Filter) {
+    constructor(private sequelize: Sequelize, private filter: Filter, private forceViewColumnsNotNull: boolean) {
         this.sequelize = sequelize;
         let dialect = this.sequelize.getDialect();
 
@@ -213,10 +213,19 @@ export class SchemaReader {
                         continue;
                     }
 
+                    let nullable = col.nullable;
+
+                    // depending on the database we might
+                    // don't get the underlying column value
+                    // so setting them to not nullable might be a solution
+                    if (this.forceViewColumnsNotNull) {
+                        nullable = false;
+                    }
+
                     let column: Column = {
                         name: col.name,
                         dataType: col.dataType,
-                        nullable: col.nullable,
+                        nullable: nullable,
                         defaultValue: col.defaultValue,
                         length: col.length,
                         precision: <any>null,
