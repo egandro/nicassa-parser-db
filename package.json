@@ -15,7 +15,7 @@
   },
   "main": "index.ts",
   "dependencies": {
-    "@types/node": "^7.0.22",
+    "@types/node": "^14.0.0",
     "@types/nomnom": "^0.0.28",
     "@types/sequelize": "^4.0.55",
     "mysql": "^2.13.0",
