@@ -25,7 +25,7 @@
     "prompt": "^1.0.0",
     "sequelize": "^3.30.4",
     "sha.js": "^2.4.8",
-    "sqlite3": "^3.1.8",
+    "sqlite3": "^5.0.0",
     "tedious": "^2.0.0",
     "ts-node": "^3.0.4",
     "typescript": "^2.3.3"
