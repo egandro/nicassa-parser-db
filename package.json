@@ -20,7 +20,7 @@
     "@types/sequelize": "^4.0.55",
     "mysql": "^2.13.0",
     "nomnom": "^1.8.1",
-    "pg": "^6.2.3",
+    "pg": "^8.0.0",
     "pg-hstore": "^2.3.2",
     "prompt": "^1.0.0",
     "sequelize": "^3.30.4",
